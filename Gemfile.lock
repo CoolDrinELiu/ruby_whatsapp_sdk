@@ -142,6 +142,7 @@ DEPENDENCIES
   rubocop
   rubocop-minitest
   rubocop-performance
+  sorbet-runtime
   spoom
   tapioca
   webmock

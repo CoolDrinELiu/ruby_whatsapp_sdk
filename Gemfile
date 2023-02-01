@@ -9,6 +9,7 @@ gem("faraday", '~> 1.10.3')
 gem("faraday-multipart")
 gem("oj")
 gem("rake", ">= 12.3.3")
+gem('sorbet-runtime')
 gem("zeitwerk", ">= 2.6.0")
 
 group(:test) do
