@@ -2,11 +2,9 @@ PATH
   remote: .
   specs:
     whatsapp_sdk (0.7.0)
-      faraday (>= 2.3.0)
+      faraday (~> 1.10.3)
       faraday-multipart (~> 1.0.4)
       oj (~> 3.13.13)
-      sorbet
-      sorbet-runtime
       zeitwerk (~> 2.6.0)
 
 GEM
@@ -19,12 +17,29 @@ GEM
     crack (0.4.5)
       rexml
     diff-lcs (1.5.0)
-    faraday (2.5.2)
-      faraday-net_http (>= 2.0, < 3.1)
+    faraday (1.10.3)
+      faraday-em_http (~> 1.0)
+      faraday-em_synchrony (~> 1.0)
+      faraday-excon (~> 1.1)
+      faraday-httpclient (~> 1.0)
+      faraday-multipart (~> 1.0)
+      faraday-net_http (~> 1.0)
+      faraday-net_http_persistent (~> 1.0)
+      faraday-patron (~> 1.0)
+      faraday-rack (~> 1.0)
+      faraday-retry (~> 1.0)
       ruby2_keywords (>= 0.0.4)
+    faraday-em_http (1.0.0)
+    faraday-em_synchrony (1.0.0)
+    faraday-excon (1.1.0)
+    faraday-httpclient (1.0.1)
     faraday-multipart (1.0.4)
       multipart-post (~> 2)
-    faraday-net_http (3.0.0)
+    faraday-net_http (1.0.1)
+    faraday-net_http_persistent (1.2.0)
+    faraday-patron (1.0.0)
+    faraday-rack (1.0.0)
+    faraday-retry (1.0.3)
     hashdiff (1.0.1)
     method_source (1.0.0)
     minitest (5.16.1)
@@ -72,6 +87,7 @@ GEM
       sorbet-static (= 0.5.10346)
     sorbet-runtime (0.5.10346)
     sorbet-static (0.5.10346-universal-darwin-21)
+    sorbet-static (0.5.10346-universal-darwin-22)
     sorbet-static (0.5.10346-x86_64-linux)
     sorbet-static-and-runtime (0.5.10346)
       sorbet (= 0.5.10346)
@@ -109,12 +125,13 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  arm64-darwin-22
   x86_64-darwin-21
   x86_64-linux
 
 DEPENDENCIES
   bundler (~> 2.3)
-  faraday
+  faraday (~> 1.10.3)
   faraday-multipart
   minitest (~> 5.0)
   mocha
@@ -125,8 +142,6 @@ DEPENDENCIES
   rubocop
   rubocop-minitest
   rubocop-performance
-  sorbet
-  sorbet-runtime
   spoom
   tapioca
   webmock
